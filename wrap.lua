@@ -8,7 +8,7 @@ local function wrap(t)
         end
       end
       return function(...)
-        args = {...}
+        local args = {...}
         args[1] = t
         t[name](unpack(args))
         return wrapper
